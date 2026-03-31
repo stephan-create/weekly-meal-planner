@@ -50,6 +50,8 @@ Bij de eerste keer start de onboarding. Daarna duurt het wekelijks ~5 minuten.
 - **Google Calendar** gekoppeld (voor automatische agenda-scan — werkt ook zonder, dan vul je handmatig in)
 - **Picnic account** (optioneel — zonder Picnic krijg je een gewone boodschappenlijst)
 
+> **Mac-gebruikers:** Als er bij installatie een popup verschijnt over "Command Line Developer Tools", klik dan op **Installeren**. Dit is een eenmalige macOS-vereiste van Claude Desktop, niet van deze skill.
+
 ## Credits
 
 - Picnic MCP server: [ivo-toby/mcp-picnic](https://github.com/ivo-toby/mcp-picnic) (unofficial)
