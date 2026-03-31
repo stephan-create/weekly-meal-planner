@@ -7,8 +7,7 @@ Een skill voor Claude (Cowork mode) die wekelijks meal planning automatiseert: v
 ```
 weekly-meal-planner/
 ├── weekly-meal-planner.skill   ← De skill (installeer in Claude)
-├── mcp-picnic/                 ← Picnic supermarkt-koppeling (optioneel)
-│   └── (GitHub repo van ivo-toby/mcp-picnic)
+├── meal-planner.mcpb           ← MCP server: data-opslag + Picnic-koppeling
 └── README.md                   ← Dit bestand
 ```
 
@@ -21,23 +20,21 @@ weekly-meal-planner/
 
 ## Installatie
 
-### Stap 1: Installeer de skill
+### Stap 1: Installeer de MCP server
+
+De MCP server slaat je profiel, recepten en weekplannen op in een lokale database. Optioneel koppelt hij ook je Picnic-account voor automatisch boodschappen doen.
+
+1. Dubbelklik op `meal-planner.mcpb` — Claude Desktop opent het installatievenster
+2. **Picnic-klant?** Vul je Picnic-inloggegevens in (email + wachtwoord). **Geen Picnic?** Laat de velden leeg — je krijgt dan een gewone boodschappenlijst.
+3. Herstart Claude volledig (**Cmd+Q**, opnieuw openen)
+
+> **Let op:** Log je bij Picnic in via Google of Apple? Dan heb je mogelijk geen wachtwoord. Stel er eerst een in via de Picnic app (Instellingen → Account → Wachtwoord wijzigen).
+
+### Stap 2: Installeer de skill
 
 1. Open Claude Desktop (Cowork mode)
 2. Sleep het bestand `weekly-meal-planner.skill` in een gesprek
 3. Claude installeert de skill automatisch
-
-### Stap 2: Koppel Picnic (optioneel, maar aanbevolen)
-
-Met de Picnic-koppeling zet Claude je boodschappen automatisch in je Picnic-mandje. Scheelt ~10 minuten per week.
-
-1. Zorg dat je een Picnic-account hebt (gratis aanmelden op [picnic.app](https://picnic.app))
-2. Sleep de map `mcp-picnic` vanuit Finder in je Claude-gesprek
-3. Claude herkent de MCP-server en vraagt om installatie — klik op **Install**
-4. Vul je Picnic-inloggegevens in (email + wachtwoord)
-5. Herstart Claude volledig (**Cmd+Q**, opnieuw openen)
-
-> **Let op:** Log je bij Picnic in via Google of Apple? Dan heb je mogelijk geen wachtwoord. Stel er eerst een in via de Picnic app (Instellingen → Account → Wachtwoord wijzigen).
 
 ### Stap 3: Start de meal planner
 
@@ -52,7 +49,6 @@ Bij de eerste keer start de onboarding. Daarna duurt het wekelijks ~5 minuten.
 - **Claude Desktop** met Cowork mode
 - **Google Calendar** gekoppeld (voor automatische agenda-scan — werkt ook zonder, dan vul je handmatig in)
 - **Picnic account** (optioneel — zonder Picnic krijg je een gewone boodschappenlijst)
-- **Node.js v18+** (vereist voor de Picnic MCP-server)
 
 ## Credits
 
